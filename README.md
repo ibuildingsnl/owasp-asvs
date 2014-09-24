@@ -2,6 +2,8 @@
 
 This repository aims to host the versioned and authoritative source data for the OWASP ASVS project.
 
+You can find the canonical data at [src/asvs.json](src/asvs.json)
+
 ## Why JSON?
 In order to build on top of this data a strict and normalized format was required (
 unlike say storing everything in MarkDown or HTML) as it's much easier to remove strictness then to add it.
