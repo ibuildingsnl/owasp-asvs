@@ -1,0 +1,1403 @@
+{
+    "chapterNames": {
+        "2": {
+            "en": "Authentication"
+        },
+        "3": {
+            "en": "Session Management"
+        },
+        "4": {
+            "en": "Access Control"
+        },
+        "5": {
+            "en": "Malicious Input Handling"
+        },
+        "7": {
+            "en": "Cryptography at Rest"
+        },
+        "8": {
+            "en": "Error Handling and Logging"
+        },
+        "9": {
+            "en": "Data Protection"
+        },
+        "10": {
+            "en": "Communications"
+        },
+        "11": {
+            "en": "HTTP"
+        },
+        "13": {
+            "en": "Malicious Controls"
+        },
+        "15": {
+            "en": "Business Logic"
+        },
+        "16": {
+            "en": "File and Resource"
+        },
+        "17": {
+            "en": "Mobile"
+        }
+    },
+    "levelNames": {
+        "0": {
+            "en": "Cursory"
+        },
+        "1": {
+            "en": "Opportunistic"
+        },
+        "2": {
+            "en": "Standard"
+        },
+        "3": {
+            "en": "Advanced"
+        }
+    },
+    "requirements": [
+        {
+            "chapterNr": "2",
+            "nr": "1",
+            "title": {
+                "en": "Verify all pages and resources require authentication except those specifically intended to be public (Principle of complete mediation).",
+                "fr": "Vérifier que toutes les pages et ressources requièrent une authentification à l’exception de celles spécifiquement désignées comme publiques (principe de .médiation complète)"
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "2",
+            "title": {
+                "en": "Verify all password fields do not echo the user’s password when it is entered.",
+                "fr": "Vérifier que tous les champs de saisie de mot de passe ne réfléchissent pas le mot de passe de l’utilisateur lorsqu’il est saisi."
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "4",
+            "title": {
+                "en": "Verify all authentication controls are enforced on the server side.",
+                "fr": "Vérifier que tous les contrôles d’authentification sont mis en place du côté serveur."
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "5",
+            "title": {
+                "en": "Verify all authentication controls (including libraries that call external authentication services) have a centralized implementation.",
+                "fr": "Vérifier que tous les contrôles d’authentification (incluant les bibliothèques qui appellent des services d’authentification tiers) ont une implémentation centralisée."
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "6",
+            "title": {
+                "en": "Verify all authentication controls fail securely to ensure attackers cannot log in.",
+                "fr": "Vérifier que tous les contrôles d’authentification échouent en toute sécurité pour assurer que des attaquants ne peuvent pas s’authentifier."
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "7",
+            "title": {
+                "en": "Verify password entry fields allow or encourage the use of passphrases, and do not prevent long passphrases or highly complex passwords being entered, and provide a sufficient minimum strength to protect against the use of commonly chosen passwords.",
+                "fr": "Vérifier que tous les champs de saisie de mot de passe permettent ou encouragent l’utilisation de passphrases, et n’empêchent pas de longues passphrases ou des mots de passe très complexes d’être saisis, et fournissent une rigueur minimum suffisante pour prévenir l’utilisation de mots de passe couramment choisis."
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "8",
+            "title": {
+                "en": "Verify all account identity authentication functions (such as registration, update profile, forgot username, forgot password, disabled / lost token, help desk or IVR) that might regain access to the account are at least as resistant to attack as the primary authentication mechanism.",
+                "fr": "Vérifier que toutes les fonctions d’authentification de l’identité d’un compte utilisateur (comme l’enregistrement, mise à jour du profil, nom d’utilisateur oublié, mot de passe perdu, token désactivé / perdu, assistance or IVR) qui permettraient de retrouver l’accès au compte sont au moins aussi résistantes aux attaques que le mécanisme d’authentification principal."
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "9",
+            "title": {
+                "en": "Verify users can safely change their credentials using a mechanism that is at least as resistant to attack as the primary authentication mechanism.",
+                "fr": "Vérifier que les utilisateurs peuvent changer leurs identifiants en utilisant un mécanisme au moins aussi résistant aux attaques que le mécanisme d’authentification principal."
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "12",
+            "title": {
+                "en": "Verify that all authentication decisions are logged. This should include requests with missing required information, needed for security investigations.",
+                "fr": "Vérifier que toute décision d’authentification est journalisée. Cela devrait inclure les requêtes avec des informations requises manquantes, nécessaires aux enquêtes de sécurité."
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "13",
+            "title": {
+                "en": "Verify that account passwords are salted using a salt that is unique to that account (e.g., internal user ID, account creation) and use bcrypt, scrypt or PBKDF2 before storing the password.",
+                "fr": "Vérifier que les mots de passe utilisateurs sont salés en utilisant un sel unique pour chaque compte (par ex. ID interne d’utilisateur, création du compte) et utilise bcrypt, scrypt ou PBKDF2 avant de stocker le mot de passe."
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "16",
+            "title": {
+                "en": "Verify that credentials, and all other identity information handled by the application(s), do not traverse unencrypted or weakly encrypted links.",
+                "fr": "Vérifier que les identifiants utilisateur, et toute autre information d’identité traitées par l’application ne traversent pas de liens non ou faiblement chiffrés."
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "17",
+            "title": {
+                "en": "Verify that the forgotten password function and other recovery paths do not reveal the current password and that the new password is not sent in clear text to the user.",
+                "fr": "Vérifier que la fonctionnalité mot de passe oublié et autre chemins de recouvrement ne révèlent pas le mot de passe courant et que le nouveau mot de passe n’est pas envoyé en texte clair à l’utilisateur."
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "18",
+            "title": {
+                "en": "Verify that username enumeration is not possible via login, password reset, or forgot account functionality.",
+                "fr": "Vérifier que l’énumération de noms d’utilisateurs n’est pas possible via les fonctionnalités d’authentification, réinitialisation de mot de passé ou identifiant oublié."
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "19",
+            "title": {
+                "en": "Verify there are no default passwords in use for the application framework or any components used by the application (such as “admin/password”).",
+                "fr": "Vérifier qu’aucun mot de passe par défaut (tel que admin/password) n’est utilisé pour le framework de l’application ou un de ses composants."
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "20",
+            "title": {
+                "en": "Verify that a resource governor is in place to protect against vertical (a single account tested against all possible passwords) and horizontal brute forcing (all accounts tested with the same password e.g. “Password1”). A correct credential entry should incur no delay. Both these governor mechanisms should be active simultaneously to protect against diagonal and distributed attacks.",
+                "fr": "Vérifier qu’un gouverneur de ressources est en place pour protéger contre une attaque par force brute vertical (un même compte utilisateur testé avec tous les mots de passe possibles) et horizontale (tous les comptes testés avec le même mot de passe, par ex. 12345). Un identifiant correct ne devrait subir aucun délai. Ces deux mécanismes de gouvernance devraient être actifs en même temps pour protéger contre des attaques diagonales et distribuées."
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "21",
+            "title": {
+                "en": "Verify that all authentication credentials for accessing services external to the application are encrypted and stored in a protected location (not in source code).",
+                "fr": "Vérifier que tous les identifiants pour accéder des services externalisés sont chiffrés et stockés en lieu protégé (pas dans le code source)."
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "22",
+            "title": {
+                "en": "Verify that forgot password and other recovery paths send a link including a time-limited activation token rather than the password itself. Additional authentication based on soft-tokens (e.g. SMS token, native mobile applications, etc.) can be required as well before the link is sent over.",
+                "fr": "Vérifier que les fonctions de recouvrement, comme le mot de passe, envoient un lien incluant un token d’activation limité dans le temps plutôt que le mot de passe lui-même. Une authentification complémentaire de type soft-token (par ex. token SMS, application mobile native, etc.) peut être requise également avant que le lien ne soit envoyé."
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "23",
+            "title": {
+                "en": "Verify that forgot password functionality does not lock or otherwise disable the account until after the user has successfully changed their password. This is to prevent valid users from being locked out. ",
+                "fr": "Vérifier que la fonctionnalité de mot de passe perdu ne verrouille pas ou ne désactive pas le compte avant que l’utilisateur n’ait effectivement changé son mot de passe. Cela pour prévenir des utilisateurs valides d’être bloqués."
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "24",
+            "title": {
+                "en": "Verify that there are no shared knowledge questions/answers (so called \"secret\" questions and answers).",
+                "fr": "Vérifier qu’ils n’existent pas de questions/réponses partagées (communément appelées questions secrètes)"
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "25",
+            "title": {
+                "en": "Verify that the system can be configured to disallow the use of a configurable number of previous passwords.",
+                "fr": "Vérifier que le système peut être configure pour empêcher l’utilisation d’un nombre configurable de mots de passe précédemment utilisés."
+            }
+        },
+        {
+            "chapterNr": "2",
+            "nr": "26",
+            "title": {
+                "en": "Verify re-authentication, step up or adaptive authentication, SMS or other two factor authentication, or transaction signing is required before any application-specific sensitive operations are permitted as per the risk profile of the application.",
+                "fr": "Vérifier qu’une réauthentification, authentification adaptative ou étape supplémentaire, SMS ou autre second facteur, ou signature de transaction est requise avant que toute opération sensible ne soit permise en fonction du profil de risque de l’application."
+            }
+        },
+        {
+            "chapterNr": "3",
+            "nr": "1",
+            "title": {
+                "en": "Verify that the framework’s default session management control implementation is used by the application.",
+                "fr": "Vérifier que l’application utilise l’implémentation du contrôle de gestion de session par défaut du framework."
+            }
+        },
+        {
+            "chapterNr": "3",
+            "nr": "2",
+            "title": {
+                "en": "Verify that sessions are invalidated when the user logs out.",
+                "fr": "Vérifier que les sessions sont invalidées lorsque l’utilisateur se déconnecte."
+            }
+        },
+        {
+            "chapterNr": "3",
+            "nr": "3",
+            "title": {
+                "en": "Verify that sessions timeout after a specified period of inactivity.",
+                "fr": "Vérifier que les sessions s’interrompent après une période d’inactivité donnée."
+            }
+        },
+        {
+            "chapterNr": "3",
+            "nr": "4",
+            "title": {
+                "en": "Verify that sessions timeout after an administratively-configurable maximum time period regardless of activity (an absolute timeout).",
+                "fr": "Vérifier que les sessions sont interrompues après une période (absolue) définie configurable, sans lien avec l’inactivité."
+            }
+        },
+        {
+            "chapterNr": "3",
+            "nr": "5",
+            "title": {
+                "en": "Verify that all pages that require authentication to access them have logout links.",
+                "fr": "Vérifier que toutes les pages qui requièrent une authentification pour être accédées possèdent un lien de déconnection."
+            }
+        },
+        {
+            "chapterNr": "3",
+            "nr": "6",
+            "title": {
+                "en": "Verify that the session id is never disclosed other than in cookie headers; particularly in URLs, error messages, or logs. This includes verifying that the application does not support URL rewriting of session cookies.",
+                "fr": "Vérifier que l’id de session n’est jamais divulgué autrement que dans les entêtes de cookie; en particulier au niveau des URLs, messages d’erreur, ou journaux. Cela inclut la vérification que l’application ne supporte pas la réécriture d’URL des cookies de session."
+            }
+        },
+        {
+            "chapterNr": "3",
+            "nr": "7",
+            "title": {
+                "en": "Verify that the session id is changed on login to prevent session fixation.",
+                "fr": "Vérifier que l’id de session est renouvelé pour empêcher la fixation de session. (CWE-84, WASC-37, CAPEC-61)"
+            }
+        },
+        {
+            "chapterNr": "3",
+            "nr": "8",
+            "title": {
+                "en": "Verify that the session id is changed upon re-authentication.",
+                "fr": "Vérifier que l’id de session est renouvelé lors d’une réauthentification."
+            }
+        },
+        {
+            "chapterNr": "3",
+            "nr": "10",
+            "title": {
+                "en": "Verify that only session ids generated by the application framework are recognized as valid by the application.",
+                "fr": "Vérifier qu’uniquement les ids de session générés par le framework de l’application sont reconnus comme valides par l’application."
+            }
+        },
+        {
+            "chapterNr": "3",
+            "nr": "11",
+            "title": {
+                "en": "Verify that authenticated session tokens are sufficiently long and random to withstand session guessing attacks.",
+                "fr": "Vérifier que les tokens de session authentifiée sont suffisamment longs et aléatoires pour résister aux attaques intuitives."
+            }
+        },
+        {
+            "chapterNr": "3",
+            "nr": "12",
+            "title": {
+                "en": "Verify that authenticated session tokens using cookies have their path set to an appropriately restrictive value for that site. The domain cookie attribute restriction should not be set unless for a business requirement, such as single sign on.",
+                "fr": "Vérifier que les tokens de session authentifiée utilisant les cookies ont leur chemin défini à une valeur restrictive appropriée pour ce site. La restriction de l’attribut domain du cookie ne devrait pas être définie, à moins d’une exigence de business, comme le single sign on."
+            }
+        },
+        {
+            "chapterNr": "3",
+            "nr": "14",
+            "title": {
+                "en": "Verify that authenticated session tokens using cookies sent via HTTP, are protected by the use of \"HttpOnly\".",
+                "fr": "Vérifier que les tokens de session authentifiée utilisant les cookies envoyés via http sont protégés par l’utilisation de \"HttpOnly\"."
+            }
+        },
+        {
+            "chapterNr": "3",
+            "nr": "15",
+            "title": {
+                "en": "Verify that authenticated session tokens using cookies are protected with the \"secure\" attribute and a strict transport security header (such as Strict-Transport-Security: max-age=60000; includeSubDomains) are present.",
+                "fr": "Vérifier que les tokens de session authentifiée utilisant les cookies sont protégés avec l’attribut “secure” et un entête strict transport security (comme Strict-Transport-Security: max-age=60000; includeSubDomains) sont présents."
+            }
+        },
+        {
+            "chapterNr": "3",
+            "nr": "16",
+            "title": {
+                "en": "Verify that the application does not permit duplicate concurrent user sessions, originating from different machines. ",
+                "fr": "Vérifier que l’application ne permet pas les sessions utilisateur concurrentes simultanées en provenance de machines différentes."
+            }
+        },
+        {
+            "chapterNr": "4",
+            "nr": "1",
+            "title": {
+                "en": "Verify that users can only access secured functions or services for which they possess specific authorization.",
+                "fr": "Vérifier que les utilisateurs peuvent seulement accéder aux fonctions ou services sécurisés pour lesquels ils ont une autorisation spécifique."
+            }
+        },
+        {
+            "chapterNr": "4",
+            "nr": "2",
+            "title": {
+                "en": "Verify that users can only access secured URLs for which they possess specific authorization.",
+                "fr": "Vérifier que les utilisateurs niquement accéder à des URLs sécurisées pour lesquelles ils ont une autorisation spécifique."
+            }
+        },
+        {
+            "chapterNr": "4",
+            "nr": "3",
+            "title": {
+                "en": "Verify that users can only access secured data files for which they possess specific authorization.",
+                "fr": "Vérifier que les utilisateurs niquement accéder à des fichiers de données sécurisés pour lesquels ils ont une autorisation spécifique."
+            }
+        },
+        {
+            "chapterNr": "4",
+            "nr": "4",
+            "title": {
+                "en": "Verify that direct object references are protected, such that only authorized objects or data are accessible to each user (for example, protect against direct object reference tampering).",
+                "fr": "Vérifier que les références aux objets directes sont protégées, de telle sorte que seuls les objets ou données autorisés sont accessibles à chaque utilisateur (par exemple, protection contre la falsification de référence directe aux objets)."
+            }
+        },
+        {
+            "chapterNr": "4",
+            "nr": "5",
+            "title": {
+                "en": "Verify that directory browsing is disabled unless deliberately desired.",
+                "fr": "Vérifier que le parcours de répertoire est désactivé à moins ue volontairement souhaité."
+            }
+        },
+        {
+            "chapterNr": "4",
+            "nr": "8",
+            "title": {
+                "en": "Verify that access controls fail securely.",
+                "fr": "Vérifier que les contrôles d'accès échouent de manière sure."
+            }
+        },
+        {
+            "chapterNr": "4",
+            "nr": "9",
+            "title": {
+                "en": "Verify that the same access control rules implied by the presentation layer are enforced on the server side for that user role, such that controls and parameters cannot be re-enabled or re-added from higher privilege users.",
+                "fr": "Vérifier que les mêmes règles de contrôles d'accès induites par la couche présentation sont imposées du côté serveur pour ce rôle utilisateur, afin que les contrôles et paramètres ne puissent pas être ré-activés ou ré-ajoutés par des utilisateurs de privilèges supérieurs."
+            }
+        },
+        {
+            "chapterNr": "4",
+            "nr": "10",
+            "title": {
+                "en": "Verify that all user and data attributes and policy information used by access controls cannot be manipulated by end users unless specifically authorized.",
+                "fr": "Vérifier que tous les attributs utilisateur et données et information de politique utilisés par des contrôles d'accès ne peuvent pa être manipulés par les utilisateurs finaux à moins d'une autorisation spécifique."
+            }
+        },
+        {
+            "chapterNr": "4",
+            "nr": "11",
+            "title": {
+                "en": "Verify that all access controls are enforced on the server side.",
+                "fr": "Vérifier que tous les contrôles d'accès sont imposés du côté serveur."
+            }
+        },
+        {
+            "chapterNr": "4",
+            "nr": "12",
+            "title": {
+                "en": "Verify that there is a centralized mechanism (including libraries that call external authorization services) for protecting access to each type of protected resource.",
+                "fr": "Vérifier qu'il existe un mécanisme centralisé (incluant des bibliothèques qui font appel à des services d'autorisation externalisés) pour protéger l'accès à tout type de ressource protégée."
+            }
+        },
+        {
+            "chapterNr": "4",
+            "nr": "14",
+            "title": {
+                "en": "Verify that all access control decisions are be logged and all failed decisions are logged.",
+                "fr": "Vérifier que toutes les décisions de contrôle d'accès sont journalisées et que toutes les décisions échouées sont journalisées."
+            }
+        },
+        {
+            "chapterNr": "4",
+            "nr": "16",
+            "title": {
+                "en": "Verify that the application or framework generates strong random anti-CSRF tokens unique to the user as part of all high value transactions or accessing sensitive data, and that the application verifies the presence of this token with the proper value for the current user when processing these requests.",
+                "fr": "Vérifier que l'application ou framework génère des tokens anti-CSRF forts et uniques à l'utilisateur dans chaque transactions de haute valeur ou accès à des données sensibles, et que l'application vérifie la présence de ce token avec la valeur correcte pour l'utilisateur en cours lors du traitement de ces requêtes."
+            }
+        },
+        {
+            "chapterNr": "4",
+            "nr": "17",
+            "title": {
+                "en": "Aggregate access control protection – verify the system can protect against aggregate or continuous access of secured functions, resources, or data. For example, possibly by the use of a resource governor to limit the number of edits per hour or to prevent the entire database from being scraped by an individual user.",
+                "fr": "Protection de contrôle d'accès aggrégé - vérifier que le système peut protéger contre l'accès aggrégé ou ininterrompu aux fonctions, ressources ou données sécurisées. Par exemple, potentiellement par l'utilisation d'un gouverneur de ressource pour limiter le nombre d'éditions par heure ou pour empêcher la base de données complète d'être creusée par un utilisateur unique."
+            }
+        },
+        {
+            "chapterNr": "5",
+            "nr": "1",
+            "title": {
+                "en": "Verify that the runtime environment is not susceptible to buffer overflows, or that security controls prevent buffer overflows.",
+                "fr": "Vérifier que l'environnement runtime n'est pas vulnérable aux débordements de tampon, ou que des contrôles de sécurité empêchent des débordements de tampon."
+            }
+        },
+        {
+            "chapterNr": "5",
+            "nr": "3",
+            "title": {
+                "en": "Verify that all input validation failures result in input rejection.",
+                "fr": "Vérifier que tous les échecs de validation d'entrée résultent en un rejet d'entrée."
+            }
+        },
+        {
+            "chapterNr": "5",
+            "nr": "4",
+            "title": {
+                "en": "Verify that a character set, such as UTF-8, is specified for all sources of input.",
+                "fr": "Vérifier qu'un jeu de caractères, comme UTF-8, est spécifié pour toutes les sources d'entrée."
+            }
+        },
+        {
+            "chapterNr": "5",
+            "nr": "5",
+            "title": {
+                "en": "Verify that all input validation or encoding routines are performed and enforced on the server side.",
+                "fr": "Vérifier que toutes les routines de validation d'entrée ou encodage sont réalisées et imposées côté serveur."
+            }
+        },
+        {
+            "chapterNr": "5",
+            "nr": "6",
+            "title": {
+                "en": "Verify that a single input validation control is used by the application for each type of data that is accepted.",
+                "fr": "Vérifier qu'un contrôle de validation d'entrée unique est utilisé par l'application pour chaque type de donnée qui est accepté."
+            }
+        },
+        {
+            "chapterNr": "5",
+            "nr": "7",
+            "title": {
+                "en": "Verify that all input validation failures are logged.",
+                "fr": "Vérifier que tous les échecs de validation d'entrée sont journalisés."
+            }
+        },
+        {
+            "chapterNr": "5",
+            "nr": "8",
+            "title": {
+                "en": "Verify that all input data is canonicalized for all downstream decoders or interpreters prior to validation.",
+                "fr": "Vérifier que toutes les données d'entrée sont canonicalisées pour tous les décodeurs ou interpréteurs en aval avant la validation."
+            }
+        },
+        {
+            "chapterNr": "5",
+            "nr": "10",
+            "title": {
+                "en": "Verify that the runtime environment is not susceptible to SQL Injection, or that security controls prevent SQL Injection.",
+                "fr": "Vérifier que l'environnement runtime n'est pas affecté par l'injection SQL, ou que des contrôles de sécurité empêchent l'injection SQL."
+            }
+        },
+        {
+            "chapterNr": "5",
+            "nr": "11",
+            "title": {
+                "en": "Verify that the runtime environment is not susceptible to LDAP Injection, or that security controls prevent LDAP Injection.",
+                "fr": "Vérifier que l'environnement runtime n'est pas affecté par l'injection LDAP, ou que des contrôles de sécurité empêchent l'injection LDAP."
+            }
+        },
+        {
+            "chapterNr": "5",
+            "nr": "12",
+            "title": {
+                "en": "Verify that the runtime environment is not susceptible to OS Command Injection, or that security controls prevent OS Command Injection.",
+                "fr": "Vérifier que l'environnement runtime n'est pas affecté par l'injection de commande système, ou que des contrôles de sécurité empêchent l'injection de commande système."
+            }
+        },
+        {
+            "chapterNr": "5",
+            "nr": "13",
+            "title": {
+                "en": "Verify that the runtime environment is not susceptible to XML External Entity attacks or that security controls prevents XML External Entity attacks.",
+                "fr": "Vérifier que l'environnement runtime n'est pas affecté par les attaques Entité Externe XML, ou que des contrôles de sécurité empêchent les attaques Entité Externe XML."
+            }
+        },
+        {
+            "chapterNr": "5",
+            "nr": "14",
+            "title": {
+                "en": "Verify that the runtime environment is not susceptible to XML Injections or that security controls prevents XML Injections.",
+                "fr": "Vérifier que l'environnement runtime n'est pas affecté par les injections XML, ou que des contrôles de sécurité empêchent les injections XML."
+            }
+        },
+        {
+            "chapterNr": "5",
+            "nr": "16",
+            "title": {
+                "en": "Verify that all untrusted data that are output to HTML (including HTML elements, HTML attributes, JavaScript data values, CSS blocks, and URI attributes) are properly escaped for the applicable context.",
+                "fr": "Vérifier que toutes les données non fiables qui sont présentées en HTML (incluant les éléments HTML, attributs HTML, valeurs de données JavaScript, blocs CSS, et attributs URI) sont correctement échappés pour le contexte applicable."
+            }
+        },
+        {
+            "chapterNr": "5",
+            "nr": "17",
+            "title": {
+                "en": "If the application framework allows automatic mass parameter assignment (also called automatic variable binding) from the inbound request to a model, verify that security sensitive fields such as “accountBalance”, “role” or “password” are protected from malicious automatic binding.",
+                "fr": "Si le framework d'application permet l'assignement automatique de paramètre en masse (aussi appelé binding de variable automatique) depuis la requête entrante vers un modèle; vérifier que les champs de sécurité sensibles, comme \"accountBalance\", \"role\" ou \"password\" sont protégés contre le binding automatique malicieux."
+            }
+        },
+        {
+            "chapterNr": "5",
+            "nr": "18",
+            "title": {
+                "en": "Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (GET, POST, cookies, headers, environment, etc.)",
+                "fr": "Vérifier que l'application possède des défenses contre les attaques par pollution de paramètre HTTP, en particulier si le framework d'application ne fait pas distinction entre la source des paramètres de requête (GET, POST, cookies, entêtes, environnement, etc.)"
+            }
+        },
+        {
+            "chapterNr": "5",
+            "nr": "19",
+            "title": {
+                "en": "Verify that for each type of output encoding/escaping performed by the application, there is a single security control for that type of output for the intended destination.",
+                "fr": "Vérifier que pour chaque type d'encodage/échappement de sortie réalisé par l'application, il existe un unique contrôle de sécurité pour ce type de sortie pour la destination prévue."
+            }
+        },
+        {
+            "chapterNr": "7",
+            "nr": "1",
+            "title": {
+                "en": "Verify that all cryptographic functions used to protect secrets from the application user are implemented server side.",
+                "fr": "Vérifier que toutes les fonctions cryptographiques utilisées pour\nprotéger des secrets de l'utilisateur de l'application sont\nimplémentées côté serveur."
+            }
+        },
+        {
+            "chapterNr": "7",
+            "nr": "2",
+            "title": {
+                "en": "Verify that all cryptographic modules fail securely.",
+                "fr": "Vérifier que tous les modules cryptographiques échouent de manière sure."
+            }
+        },
+        {
+            "chapterNr": "7",
+            "nr": "3",
+            "title": {
+                "en": "Verify that access to any master secret(s) is protected from unauthorized access (A master secret is an application credential stored as plaintext on disk that is used to protect access to security configuration information).",
+                "fr": "Vérifier que l'accès à tout secret (s) maître est protégé contre les\naccès non-autorisés (Un secret maître est une information\nd'authentification stockée en texte clair sur un disque aui est\nutilisé pour protéger l'accès aux informations de configuration de\nsécurité)."
+            }
+        },
+        {
+            "chapterNr": "7",
+            "nr": "6",
+            "title": {
+                "en": "Verify that all random numbers, random file names, random GUIDs, and random strings are generated using the cryptographic module’s approved random number generator when these random values are intended to be unguessable by an attacker.",
+                "fr": "Vérifier que tous les nombres aléatoires, noms de fichiers aléatoires,\nGUIDs aléatoires, et chaînes aléatoires sont générées en utilisant le\ngénérateur de nombre aléatoire approuvé du module cyptographique quand\nces valeurs aléatoires sont destinées à être non-prédictibles par un\nattaquant."
+            }
+        },
+        {
+            "chapterNr": "7",
+            "nr": "7",
+            "title": {
+                "en": "Verify that cryptographic modules used by the application have been validated against FIPS 140-2 or an equivalent standard.",
+                "fr": "Vérifier que les modules cryptographiques utilisés par l'application\nont été validés à partir de FIPS 140-2 ou un standard équivalent."
+            }
+        },
+        {
+            "chapterNr": "7",
+            "nr": "8",
+            "title": {
+                "en": "Verify that cryptographic modules operate in their approved mode according to their published security policies.",
+                "fr": "Vérifier que les modules cryptographiques opèrent dans leur mode\napprouvé en accord avec leur politiques de sécurité publiées."
+            }
+        },
+        {
+            "chapterNr": "7",
+            "nr": "9",
+            "title": {
+                "en": "Verify that there is an explicit policy for how cryptographic keys are managed (e.g., generated, distributed, revoked, expired). Verify that this policy is properly enforced.",
+                "fr": "Vérifier qu'il existe une politique explicite décrivant la gestion des\nclés cryptographiques (par ex.: générées, distribuées, révoquées,\nexpirées). Vérifier que cette politique est correctement appliquée."
+            }
+        },
+        {
+            "chapterNr": "8",
+            "nr": "1",
+            "title": {
+                "en": "Verify that the application does not output error messages or stack traces containing sensitive data that could assist an attacker, including session id and personal information.",
+                "fr": "Vérifier que l'application ne retourne pas de messages d'erreur ou\ntraces de pile contenant des données sensibles pouvant aider un\nattaquant, incluant id de session et information personelle."
+            }
+        },
+        {
+            "chapterNr": "8",
+            "nr": "2",
+            "title": {
+                "en": "Verify that all error handling is performed on trusted devices",
+                "fr": "Vérifier que tous les traitements d'erreur sont réalisés sur des\npériphériques de confiance."
+            }
+        },
+        {
+            "chapterNr": "8",
+            "nr": "3",
+            "title": {
+                "en": "Verify that all logging controls are implemented on the server.",
+                "fr": "Vérifier que tous les contrôles de journalisation sont implémentés sur\nle serveur."
+            }
+        },
+        {
+            "chapterNr": "8",
+            "nr": "4",
+            "title": {
+                "en": "Verify that error handling logic in security controls denies access by default.",
+                "fr": "Vérifier que la logique de gestion d'erreur dans les contrôles de\nsécurité empêche l'accès par défaut."
+            }
+        },
+        {
+            "chapterNr": "8",
+            "nr": "5",
+            "title": {
+                "en": "Verify security logging controls provide the ability to log both success and failure events that are identified as security-relevant.",
+                "fr": "Vérifier que les contrôles de journalisation de sécurité fournissent\nla possibilité de journaliser à la fois les événements succès et\néchecs qui sont identifiés comme relatifs à la sécurité."
+            }
+        },
+        {
+            "chapterNr": "8",
+            "nr": "6",
+            "title": {
+                "en": "Verify that each log event includes: a timestamp from a reliable source,\nseverity level of the event, an indication that this is a security relevant event (if mixed with other logs), the identity of the user that caused the event (if there is a user associated with the event), the source IP address of the request associated with the event, whether the event succeeded or failed, and a description of the event.\n",
+                "fr": "Vérifier que chaque événement journalisé contient: un timestamp d'une\nsource fiable, le niveau de sévérité de l'événement, une indication\nque c'est un événement de sécurité (si mélangé avec d'autres logs),\nl'ientité de l'utilisateur à l'origine de l'événement (si un\nutilisateur est associé à l'événement), l'adresse IP source de la\nrequête liée à l'événement, si l'événement fut un succès ou échec, et\nune description de l'événement."
+            }
+        },
+        {
+            "chapterNr": "8",
+            "nr": "7",
+            "title": {
+                "en": "Verify that all events that include untrusted data will not execute as code in the intended log viewing software.",
+                "fr": "Vérifier que tous les événements qui incluent des données non sures ne\nseront pas exécutées comme du code dans l'outil de visualisation des\njournaux."
+            }
+        },
+        {
+            "chapterNr": "8",
+            "nr": "8",
+            "title": {
+                "en": "Verify that security logs are protected from unauthorized access and modification.",
+                "fr": "Vérifier que les journaux de sécurité sont protégés contre les accès\net modifications non autorisés."
+            }
+        },
+        {
+            "chapterNr": "8",
+            "nr": "9",
+            "title": {
+                "en": "Verify that there is a single application-level logging implementation that is\nused by the software.\n",
+                "fr": "Vérifier qu'il existe une unique implémentation de journalisation au\nniveau de l'application."
+            }
+        },
+        {
+            "chapterNr": "8",
+            "nr": "10",
+            "title": {
+                "en": "Verify that the application does not log application-specific sensitive data that could assist an attacker, including user’s session identifiers and personal or sensitive information. The length and existence of sensitive data can be logged.",
+                "fr": "Vérifier que l'application ne journalise pas des données sensibles\nspécifiques à l'application qui pourraient être utiles à un attaquant,\nincluant des identifiants de session utilisateur, informations\npersonelles ou sensibls. La longueur et existence de données sensibles\npeuvent être journalisées."
+            }
+        },
+        {
+            "chapterNr": "8",
+            "nr": "11",
+            "title": {
+                "en": "Verify that a log analysis tool is available which allows the analyst to search for log events based on combinations of search criteria across all fields in the log record format supported by this system.",
+                "fr": "Vérifier qu'un outil d'analyse de logs est disponible qui permet à\nl'analyste de rechercher des événements journalisés basés sur des\ncombinaisons de critères de recherche sur tous les champs dans le\nformat d'enregistrement du journal supporté par le système."
+            }
+        },
+        {
+            "chapterNr": "8",
+            "nr": "13",
+            "title": {
+                "en": "Verify that all non-printable symbols and field separators are properly encoded in log entries, to prevent log injection.",
+                "fr": "Vérifier que tous les symboles non-imprimables et séparateurs de\nchamps sont correctement encodés dans les entrées des journaux, pour\nprévenir l'injection de log."
+            }
+        },
+        {
+            "chapterNr": "8",
+            "nr": "14",
+            "title": {
+                "en": "Verify that log fields from trusted and untrusted sources are distinguishable in log entries. ",
+                "fr": "Vérifier que les champs de log provenant de sources sures et non-sures\nsont identifiables dans les entrées de journaux."
+            }
+        },
+        {
+            "chapterNr": "8",
+            "nr": "15",
+            "title": {
+                "en": "Verify that logging is performed before executing the transaction. If logging was unsuccessful (e.g. disk full, insufficient permissions) the application fails safe. This is for when integrity and non-repudiation are a must.",
+                "fr": "Vérifier que la journalisation est effectuée avant d'effectuer la\ntransaction. Si la journalisation échoue (par ex. disque plein,\npermissions insuffisantes); l'application échoue de manière sure. Ceci\nlorsque l'intégrité et non-répudiation sont nécessaires."
+            }
+        },
+        {
+            "chapterNr": "9",
+            "nr": "1",
+            "title": {
+                "en": "Verify that all forms containing sensitive information have disabled client side caching, including autocomplete features.",
+                "fr": "Vérifier que tous les formulaires contenant des informations sensibles\nont désactivés le mécanisme de cache côté client, incluant les\nfonctionnalités de remplissage/complétion automatique."
+            }
+        },
+        {
+            "chapterNr": "9",
+            "nr": "2",
+            "title": {
+                "en": "Verify that the list of sensitive data processed by this application is identified, and that there is an explicit policy for how access to this data must be controlled, and when this data must be encrypted (both at rest and in transit). Verify that this policy is properly enforced.",
+                "fr": "Vérifier que la liste des données sensibles manipulées par\nl'application est identifiée, et qu'il existe une politique explicite\ndécrivant comment l'accès à ces données doit être controlé, et quand\nces données doivent être chiffrées (à la fois au repos et en transit).\nvérifier que cette politique est correctement appliquée."
+            }
+        },
+        {
+            "chapterNr": "9",
+            "nr": "3",
+            "title": {
+                "en": "Verify that all sensitive data is sent to the server in the HTTP message body (i.e., URL parameters are never used to send sensitive data).",
+                "fr": "Vérifier que toutes les données sensibles sont transmises au serveur\ndans le corps du message HTTP (par ex., les paramètres d'URL ne sont\njamais utilisés pour transmettre des données sensibles)."
+            }
+        },
+        {
+            "chapterNr": "9",
+            "nr": "4",
+            "title": {
+                "en": "Verify that all cached or temporary copies of sensitive data sent to the client are protected from unauthorized access or purged/invalidated after the authorized user accesses the sensitive data (e.g., the proper no-cache and no-store Cache-Control headers are set).",
+                "fr": "Vérifier que toutes les copies en cache ou temporaires des données\nsensibles envoyées au client sont protégées contre les accès\nnon-autorisés ou purgées/invalidées après que l'utilisateur ait accédé\naux données sensibles (par ex., les entêtes correctes no-cache et\nno-store Cache-Control sont définis)."
+            }
+        },
+        {
+            "chapterNr": "9",
+            "nr": "5",
+            "title": {
+                "en": "Verify that all cached or temporary copies of sensitive data stored on the server are protected from unauthorized access or purged/invalidated after the authorized user accesses the sensitive data.",
+                "fr": "Vérifier que toutes les copies en cache ou temporaires des données\nsensibles stockées sur le serveur  sont protégées contre les accès\nnon-autorisés ou purgées/invalidées après que l'utilisateur ait accédé\naux données sensibles."
+            }
+        },
+        {
+            "chapterNr": "9",
+            "nr": "6",
+            "title": {
+                "en": "Verify that there is a method to remove each type of sensitive data from the application at the end of its required retention period.",
+                "fr": "Vérifier qu'il existe une méthode pour supprimer chaque type de donnée\nsensible de l'application à la fin de sa période de rétention requise."
+            }
+        },
+        {
+            "chapterNr": "9",
+            "nr": "7",
+            "title": {
+                "en": "Verify the application minimizes the number of parameters sent to untrusted systems, such as hidden fields, Ajax variables, cookies and header values.",
+                "fr": "Vérifier que l'application minimise le nombre de paramètres envoyés\naux systèmes non fiables, comme les champs cachés, variables Ajax,\ncookies et valeurs d'entêtes."
+            }
+        },
+        {
+            "chapterNr": "9",
+            "nr": "8",
+            "title": {
+                "en": "Verify the application has the ability to detect and alert on abnormal numbers of requests for information or processing high value transactions for that user role, such as screen scraping, automated use of web service extraction, or data loss prevention. For example, the average user should not be able to access more than 5 records per hour or 30 records per day, or add 10 friends to a social network per minute.",
+                "fr": "Vérifier que l'application est capable de détecter et alerter en cas\nde nombre anormal de requêtes pour information et traitement de\ntransactions de forte valeur pour ce rôle utilisateur, comme la\ncapture de données écran, utilisation automatisée d'extraction par\nservice web, ou prévention de perte de données.\nPar exemple, un utilisateur normal ne devrait pas pouvoir accéder plus\nde 5 enregistrements par heure ou 30 enregistrements par jour, ou\najouter 10 amis par minute sur un réseau social."
+            }
+        },
+        {
+            "chapterNr": "10",
+            "nr": "1",
+            "title": {
+                "en": "Verify that a path can be built from a trusted CA to each Transport Layer Security (TLS) server certificate, and that each server certificate is valid.",
+                "fr": "Vérifier qu'un chemin peut être construit depuis un CA de confiance\nvers chaque certificat serveur TLS (Transport Layer\nSecurity), et que chaque certificat serveur est valide."
+            }
+        },
+        {
+            "chapterNr": "10",
+            "nr": "2",
+            "title": {
+                "en": "Verify that failed TLS connections do not fall back to an insecure HTTP connection.",
+                "fr": "Vérifier que les connexions TLs échouées ne retombent pas en\nconnection HTTP non sécurisée."
+            }
+        },
+        {
+            "chapterNr": "10",
+            "nr": "3",
+            "title": {
+                "en": "Verify that TLS is used for all connections (including both external and backend connections) that are authenticated or that involve sensitive data or functions.",
+                "fr": "Vérifier que TLS est utilisé pour toutes les connexions (incluant à la\nfois les connexions externes et backend) qui sont authentifiées ou qui\nimpliquent des données ou fonctions sensibles."
+            }
+        },
+        {
+            "chapterNr": "10",
+            "nr": "4",
+            "title": {
+                "en": "Verify that backend TLS connection failures are logged.",
+                "fr": "Vérifier que les échecs de connexion TLS backend sont journalisés."
+            }
+        },
+        {
+            "chapterNr": "10",
+            "nr": "5",
+            "title": {
+                "en": "Verify that certificate paths are built and verified for all client certificates using configured trust anchors and revocation information.",
+                "fr": "Vérifier que les chemins de certificat sont construits et vérifiés\npour tous les certificats clients en utilisant des ancres de confiance\net informations de révocation."
+            }
+        },
+        {
+            "chapterNr": "10",
+            "nr": "6",
+            "title": {
+                "en": "Verify that all connections to external systems that involve sensitive information or functions are authenticated.",
+                "fr": "Vérifier que toutes les connexions aux systèmes externes qui\nimpliquent des informations ou fonctions sensibles sont authentifiées."
+            }
+        },
+        {
+            "chapterNr": "10",
+            "nr": "7",
+            "title": {
+                "en": "Verify that all connections to external systems that involve sensitive information or functions use an account that has been set up to have the minimum privileges necessary for the application to function properly.",
+                "fr": "Vérifier que toutes les connexions aux systèmes externes qui\nimpliquent des informations ou fonctions sensibles utilisent un compte\nutilisateur qui a été défini avec le niveau minimum de privilèges\nrequis pour le fonctionnement de l'application."
+            }
+        },
+        {
+            "chapterNr": "10",
+            "nr": "8",
+            "title": {
+                "en": "Verify that there is a single standard TLS implementation that is used by the application that is configured to operate in an approved mode of operation (See http://csrc.nist.gov/groups/STM/cmvp/documents/fips140-2/FIPS1402IG.pdf ).",
+                "fr": "Vérifier qu'il existe une unique implémentation de TLS utilisée par l'application qui est configurée pour opérer dans un mode d'opération approuvé (Voir http://csrc.nist.gov/groups/STM/cmvp/documents/fips140-2/FIPS1402IG.pdf).\n"
+            }
+        },
+        {
+            "chapterNr": "10",
+            "nr": "9",
+            "title": {
+                "en": "Verify that specific character encodings are defined for all connections (e.g., UTF-8).",
+                "fr": "Vérifier que des encodages de caractères spécifiques sont définis pour toutes les connections (par ex. UTF-8).\n"
+            }
+        },
+        {
+            "chapterNr": "11",
+            "nr": "2",
+            "title": {
+                "en": "Verify that the application accepts only a defined set of HTTP request methods, such as GET and POST and unused methods are explicitly blocked.",
+                "fr": "Vérifier que l'application accepte seulement une liste prédéfinie de\nméthodes de requête HTTP, comme GET et POST, et que les méthodes non\nutilisées sont explicitement bloquées."
+            }
+        },
+        {
+            "chapterNr": "11",
+            "nr": "3",
+            "title": {
+                "en": "Verify that every HTTP response contains a content type header specifying a safe character set (e.g., UTF-8).",
+                "fr": "Vérifier que chaque réponse HTTP contient un entête de type de contenu\nspécifiant un jeu de caractères sûr (par ex. UTF-8)"
+            }
+        },
+        {
+            "chapterNr": "11",
+            "nr": "6",
+            "title": {
+                "en": "Verify that HTTP headers in both requests and responses contain only printable ASCII characters.",
+                "fr": "Vérifier que les entêtes HTTP, à la fois dans les requêtes et les\nréponses, contiennent uniquement des caractères ASCII imprimables."
+            }
+        },
+        {
+            "chapterNr": "11",
+            "nr": "8",
+            "title": {
+                "en": "Verify that HTTP headers and / or other mechanisms for older browsers have been included to protect against clickjacking attacks.",
+                "fr": "Vérifier que les entêtes HTTP et/ou autres mécanismes pour les anciens\nnavigateurs ont été inclus pour protéger contre les attaques\nclickjacking."
+            }
+        },
+        {
+            "chapterNr": "11",
+            "nr": "9",
+            "title": {
+                "en": "Verify that HTTP headers added by a frontend (such as X-Real-IP), and used by the application, cannot be spoofed by the end user. ",
+                "fr": "Vérifier que les entêtes HTTP ajoutés par un frontend (comme\nX-Real-IP), et utilisés par l'application, ne peuvent pas être usurpés\npar l'utilisateur final."
+            }
+        },
+        {
+            "chapterNr": "11",
+            "nr": "10",
+            "title": {
+                "en": "Verify that the HTTP header, X-Frame-Options is in use for sites where content should not be viewed in a 3rd-party X-Frame. A common middle ground is to send SAMEORIGIN, meaning only websites of the same origin may frame it. ",
+                "fr": "Vérifier que l'entête HTTP X-Frame-Options est utilisé pour les sites\noù le contenu ne devrait pas être obtenu dans une X-Frame tierse. Un\ncompromis courant est d'envoyé SAMEORIGIN, signifiant que seuls les\nsites web de la même origine peuvent le framer."
+            }
+        },
+        {
+            "chapterNr": "11",
+            "nr": "12",
+            "title": {
+                "en": "Verify that the HTTP headers do not expose detailed version information of system components.",
+                "fr": "Vérifier que les entêtes HTTP n'exposent pas d'informations détaillées\nde version des composants du système."
+            }
+        },
+        {
+            "chapterNr": "13",
+            "nr": "1",
+            "title": {
+                "en": "Verify that no malicious code is in any code that was either developed or modified in order to create the application.",
+                "fr": "Vérifier qu'aucun code malicieux n'est présent dans l'ensemble du code\nqui a été développé ou modifié pour créer l'application."
+            }
+        },
+        {
+            "chapterNr": "13",
+            "nr": "2",
+            "title": {
+                "en": "Verify that the integrity of interpreted code, libraries, executables, and configuration files is verified using checksums or hashes.",
+                "fr": "Vérifier que l'intégrité du code interprété, bibliothèques,\nexécutables, et fichiers de configuration est vérifiée en utilisant\ndes checksums ou hashés."
+            }
+        },
+        {
+            "chapterNr": "13",
+            "nr": "3",
+            "title": {
+                "en": "Verify that all code implementing or using authentication controls is not affected by any malicious code.",
+                "fr": "Vérifier que tout code implémentant ou utilisant des contrôles\nd'identification n'est pas affecté par du code malicieux."
+            }
+        },
+        {
+            "chapterNr": "13",
+            "nr": "4",
+            "title": {
+                "en": "Verify that all code implementing or using session management controls is not affected by any malicious code.",
+                "fr": "Vérifier que tout code implémentant ou utilisant des contrôles de\ngestion de session n'est pas affecté par du code malicieux."
+            }
+        },
+        {
+            "chapterNr": "13",
+            "nr": "5",
+            "title": {
+                "en": "Verify that all code implementing or using access controls is not affected by any malicious code.",
+                "fr": "Vérifier que tout code implémentant ou utilisant des contrôles d'accès\nde session n'est pas affecté par du code malicieux."
+            }
+        },
+        {
+            "chapterNr": "13",
+            "nr": "6",
+            "title": {
+                "en": "Verify that all input validation controls are not affected by any malicious code.",
+                "fr": "Vérifier que tous les contrôles de validation d'entrée ne sont pass\naffectés par du code malicieux."
+            }
+        },
+        {
+            "chapterNr": "13",
+            "nr": "7",
+            "title": {
+                "en": "Verify that all code implementing or using output validation controls is not affected by any malicious code.",
+                "fr": "Vérifier que tous les contrôles de validation de sortie ne sont pass\naffectés par du code malicieux."
+            }
+        },
+        {
+            "chapterNr": "13",
+            "nr": "8",
+            "title": {
+                "en": "Verify that all code supporting or using a cryptographic module is not affected by any malicious code.",
+                "fr": "Vérifier que tout code supportant ou utilisant un module\ncryptographique n'est pas affecté par du code malicieux."
+            }
+        },
+        {
+            "chapterNr": "13",
+            "nr": "9",
+            "title": {
+                "en": "Verify that all code implementing or using error handling and logging controls is not affected by any malicious code.",
+                "fr": "Vérifier que tout code implémentant ou utilisant des contrôles de\ngestion d'erreur ou journalisation n'est pas affecté par du code\nmalicieux."
+            }
+        },
+        {
+            "chapterNr": "13",
+            "nr": "10",
+            "title": {
+                "en": "Verify all malicious activity is adequately sandboxed.",
+                "fr": "Vérifier que toute activité mlicieuse est correctement traitée dans un\nbac à sable."
+            }
+        },
+        {
+            "chapterNr": "13",
+            "nr": "11",
+            "title": {
+                "en": "Verify that sensitive data is rapidly sanitized from memory as soon as it is no longer needed and handled in accordance to functions and techniques supported by the framework/library/operating system. ",
+                "fr": "Vérifier que la donnée sensible est rapidement supprimée de la mémoire\ndès qu'elle n'est plus nécessaire, et traitée selon les fonctions et\ntechniques supportés par le framework/bibliothèque/système\nd'exploitation."
+            }
+        },
+        {
+            "chapterNr": "15",
+            "nr": "1",
+            "title": {
+                "en": "Verify the application processes or verifies all high value business logic flows in a trusted environment, such as on a protected and monitored server.",
+                "fr": "Vérifier que l'application traite et vérifie tous les flux métier de haute valeur dans un environnement de confiance, comme un serveur protégé et surveillé."
+            }
+        },
+        {
+            "chapterNr": "15",
+            "nr": "2",
+            "title": {
+                "en": "Verify the application does not allow spoofed high value transactions, such as allowing Attacker User A to process a transaction as Victim User B by tampering with or replaying session, transaction state, transaction or user IDs.",
+                "fr": "Vérifier que l'application ne permet pas de transactions de haute valeur falsifiées, comme permettre à un utilisateur attaquant A de réaliser une transaction en tant qu'utilisateur victime B en manipulant ou rejouant une session, état de transaction, transaction ou IDs utilisateurs."
+            }
+        },
+        {
+            "chapterNr": "15",
+            "nr": "3",
+            "title": {
+                "en": "Verify the application does not allow high value business logic parameters to be tampered with, such as (but not limited to): price, interest, discounts, PII, balances, stock IDs, etc.",
+                "fr": "Vérifier que l'application ne permet pas l'altération de paramètres métier de haute valeur, comme par exemple: prix, intérêts, réduction, informations personnelles, balances, stock, etc."
+            }
+        },
+        {
+            "chapterNr": "15",
+            "nr": "4",
+            "title": {
+                "en": "Verify the application has defensive measures to protect against repudiation attacks, such as verifiable and protected transaction logs, audit trails or system logs, and in highest value systems real time monitoring of user activities and transactions for anomalies.",
+                "fr": "Vérifier que l'application possède des mesures défensives de protection contre les attaques par répudiation, tel que des journaux de transactions vérifiables et protégés, traces d'audit ou logs systèmes, et sur les systèmes critiques; surveillance temps réel des activités utilisateurs et transactions pour les anomalies."
+            }
+        },
+        {
+            "chapterNr": "15",
+            "nr": "5",
+            "title": {
+                "en": "Verify the application protects against information disclosure attacks, such as direct object reference, tampering, session brute force or other attacks.",
+                "fr": "Vérifier que l'application protège contre contre les attaques de divulgation d'informations, comme les références directes aux objets, falsification, attaques par force brute ou autres."
+            }
+        },
+        {
+            "chapterNr": "15",
+            "nr": "6",
+            "title": {
+                "en": "Verify the application has sufficient detection and governor controls to protect against brute force (such as continuously using a particular function) or denial of service attacks.",
+                "fr": "Vérifier que l'application a des contrôles de détection et gouvernance suffisants pour prévenir contre les attaques par force brute (comme l'utilisation ininterrompue d'une fonction) ou déni de services."
+            }
+        },
+        {
+            "chapterNr": "15",
+            "nr": "7",
+            "title": {
+                "en": "Verify the application has sufficient access controls to prevent elevation of privilege attacks, such as allowing anonymous users from accessing secured data or secured functions, or allowing users to access each other’s details or using privileged functions.",
+                "fr": "\nVérifier que l'application a des contrôles d'accès suffisants pour empêcher les attaques par élévation de privilèges, comme permettre à des utilisateurs anonymes d'accéder à des données ou fonctions sécurisées, ou permettre aux utilisateurs d'accéder aux informations des autres ou utiliser des fonctions privilégiées."
+            }
+        },
+        {
+            "chapterNr": "15",
+            "nr": "8",
+            "title": {
+                "en": "Verify the application will only process business logic flows in sequential step order, with all steps being processed in realistic human time, and not process out of order, skipped steps, process steps from another user, or too quickly submitted transactions.",
+                "fr": "Vérifier que l'application ne traitera les flux métier uniquement dans un ordre séquentiel, avec chaque étape étant traitée en une durée réaliste pour un humain, et ne traite pas dans le désordre, des étapes sautées, des étapes d'un autre utilisateur, ou des transactions soumises trop rapidement."
+            }
+        },
+        {
+            "chapterNr": "15",
+            "nr": "9",
+            "title": {
+                "en": "Verify the application has additional authorization (such as step up or adaptive authentication) for lower value systems, and / or segregation of duties for high value applications to enforce anti-fraud controls as per the risk of application and past fraud.",
+                "fr": "Vérifier que l'application implémente un mécanisme d'autorisation supplémentaire (comme une autentification augmentée ou adaptative) pour les systèmes de faible valeur, et / ou une séparation des taches pour les applications à forte valeur pour imposer des contrôles anti-fraude en fonction du risque."
+            }
+        },
+        {
+            "chapterNr": "15",
+            "nr": "10",
+            "title": {
+                "en": "Verify the application has business limits and enforces them in a trusted location (as on a protected server) on a per user, per day or daily basis, with configurable alerting and automated reactions to automated or unusual attack. Examples include (but not limited to): ensuring new SIM users don’t exceed $10 per day for a new phone account, a forum allowing more than 100 new users per day or preventing posts or private messages until the account has been verified, a health system should not allow a single doctor to access more patient records than they can reasonably treat in a day, or a small business finance system allowing more than 20 invoice payments or $1000 per day across all users. In all cases, the business limits and totals should be reasonable for the business concerned. The only unreasonable outcome is if there are no business limits, alerting or enforcement.",
+                "fr": "Vérifier que l'application possède des limites métier et les impose depuis un lieu sûr (comme sur un serveur protégé), pour chaque utilisateur, chaque jour, avec des mécanismes d'alertes et réactions automatiques à des attaques automatisées ou non-usuelles. Quelques exemples: s'assurer que les nouveaux utilisateurs d'une carte SIM ne dépassent pas 10€ par jour pour un nouveau compte téléphonique, un forum permettant plus de \n100 nouveaux utilisateurs par jour ou empêchant les nouvelles publications ou messages privés vant que le compte n'ait été vérifié, un système de santé ne doit pas permettre à un unique docteur d'accéder à plus d'enregistrements de données patient qu'il ne devrait raisonnablement durant une journée, ou un petit sytème financier permettant plus de 20 paiements de factures ou 1000€ par jour pour tous les utilisateurs. Dans tous les cas, les plafonds et totaux doivent être adaptés à l'activité concernée. Le seul cas inacceptable est l'absence de toute limite, alerte ou mise en application."
+            }
+        },
+        {
+            "chapterNr": "16",
+            "nr": "1",
+            "title": {
+                "en": "Verify that URL redirects and forwards do not include unvalidated data.",
+                "fr": "Vérifier que les redirections et transferts d'URL n'incluent pas de données non validées."
+            }
+        },
+        {
+            "chapterNr": "16",
+            "nr": "2",
+            "title": {
+                "en": "Verify that file names and path data obtained from untrusted sources is canonicalized to eliminate path traversal attacks.",
+                "fr": "Vérifier que les noms de fichiers et chemins obtenus depuis des sources non fiables sont canonicalisés pour éliminer les attaques par traversée de répertoire."
+            }
+        },
+        {
+            "chapterNr": "16",
+            "nr": "3",
+            "title": {
+                "en": "Verify that files obtained from untrusted sources are scanned by antivirus scanners to prevent upload of known malicious content.",
+                "fr": "Vérifier que les fichiers obtenus depuis des sources non fiables sont scannés par des antivirus pour empêcher le téléversement de contenu malicieux connu."
+            }
+        },
+        {
+            "chapterNr": "16",
+            "nr": "4",
+            "title": {
+                "en": "Verify that parameters obtained from untrusted sources are not used in manipulating filenames, pathnames or any file system object without first being canonicalized and input validated to prevent local file inclusion attacks.",
+                "fr": "Vérifier que les paramètres obtenus depuis des sources non fiables ne sont pas utilisés pour manipuler des noms de fichiers, chemins ou tout autre objet système de fichier sans être canonicalisé et validé au préalable pour empêcher les attaques par inclusion de fichier local."
+            }
+        },
+        {
+            "chapterNr": "16",
+            "nr": "5",
+            "title": {
+                "en": "Verify that parameters obtained from untrusted sources are canonicalized, input validated, and output encoded to prevent remote file inclusion attacks, particularly where input could be executed, such as header, source, or template inclusion",
+                "fr": "Vérifier que les paramètres obtenus depuis des sources non fiables sont canonicalisés, validés en entrée, et encodés en sortie pour empêcher les attaques par inclusion de fichier distant, en particulier où l'entrée peut être exécutée, comme une inclusion d'entête, source ou template."
+            }
+        },
+        {
+            "chapterNr": "16",
+            "nr": "6",
+            "title": {
+                "en": "Verify remote IFRAMEs and HTML5 cross-domain resource sharing does not allow inclusion of arbitrary remote content.",
+                "fr": "Vérifier que le partage de ressources inter-domaines IFRAMEs et HTML5 distantes ne permet pas l'inclusion de contenu distant arbitraire."
+            }
+        },
+        {
+            "chapterNr": "16",
+            "nr": "7",
+            "title": {
+                "en": "Verify that files obtained from untrusted sources are stored outside the webroot.",
+                "fr": "Vérifier que les fichiers obtenus depuis des source non fiables sont stockées en dehors de la racine web."
+            }
+        },
+        {
+            "chapterNr": "16",
+            "nr": "8",
+            "title": {
+                "en": "Verify that web or application server is configured by default to deny access to remote resources or systems outside the web or application server.",
+                "fr": "Vérifier que le serveur web ou applicatif est configuré par défaut pour refuser l'accès à des ressources ou systèmes distants en dehors du serveur web ou applicatif."
+            }
+        },
+        {
+            "chapterNr": "16",
+            "nr": "9",
+            "title": {
+                "en": "Verify the application code does not execute uploaded data obtained from untrusted sources.",
+                "fr": "Vérifier que le code de l'application n'exécute pas des données téléversées obtenues depuis des sources non fiables."
+            }
+        },
+        {
+            "chapterNr": "16",
+            "nr": "10",
+            "title": {
+                "en": "Verify if Flash, Silverlight or other rich internet application (RIA) cross domain resource sharing configuration is configured to prevent unauthenticated or unauthorized remote access.",
+                "fr": "Vérifier si la configuration de partage de ressources inter-domaines Flash, Silverlight ou autre RIA (rich internet application) est configurée pour empêcher des accès distants non authentifiés ou non autorisés."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "1",
+            "title": {
+                "en": "Verify that the client validates SSL certificates",
+                "fr": "Vérifier que le client valide les certificats SSL."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "2",
+            "title": {
+                "en": "Verify that unique device ID (UDID) values are not used as security controls.",
+                "fr": "Vérifier que des valeurs uniques d'identifiants de périphériques (UDID) ne sont utilisées comme contrôles de sécurité."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "3",
+            "title": {
+                "en": "Verify that the mobile app does not store sensitive data onto shared resources on the device (e.g. SD card or shared folders)",
+                "fr": "Vérifier que l'application mobile ne stocke pas de données sensibles sur des ressources partagées sur le périphérique (par ex. carte SD ou répertoire partagé)"
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "4",
+            "title": {
+                "en": "Verify that sensitive data is not stored in SQLite database on the device.",
+                "fr": "Vérifier que les données sensibles ne sont pas stockées dans une base de sonnées SQLite sur le périphérique."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "5",
+            "title": {
+                "en": "Verify that secret keys or passwords are not hard-coded in the executable.",
+                "fr": "Vérifier que des clés secrètes ou mots de passe ne sont pas codés en dur dans l'exécutable."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "6",
+            "title": {
+                "en": "Verify that the mobile app prevents leaking of sensitive data via auto-snapshot feature of iOS.",
+                "fr": "Vérifier que l'application mobile empêche la fuite de données sensibles via la fonctionnalité auto-snapshot d'iOS."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "7",
+            "title": {
+                "en": "Verify that the app cannot be run on a jailbroken or rooted device.",
+                "fr": "Vérifier que l'application ne peut pas être exécutée sur un périphérique jailbreaké ou rooté."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "8",
+            "title": {
+                "en": "Verify that the session timeout is of a reasonable value.",
+                "fr": "Vérifier que le timeout de session est d'une durée raisonnable."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "9",
+            "title": {
+                "en": "Verify the permissions being requested as well as the resources that it is authorized to access (i.e. AndroidManifest.xml, iOS Entitlements) .",
+                "fr": "Vérifier les permissions demandées, ainsi que les ressources auxquelles il est possible d'accéder (par ex. AndroidManifest.xml, iOS Entitlements)."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "10",
+            "title": {
+                "en": "Verify that crash logs do not contain sensitive data.",
+                "fr": "Vérifier que les journaux de plantage ne contiennent pas de données sensibles."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "11",
+            "title": {
+                "en": "Verify that the application binary has been obfuscated.",
+                "fr": "Vérifier que le binaire de l'application a été obfusqué."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "12",
+            "title": {
+                "en": "Verify that all test data has been removed from the app container (.ipa, .apk, .bar).",
+                "fr": "Vérifier que toutes les données de test ont été supprimées du container de l'application (.ipa, .apk, .bar)."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "13",
+            "title": {
+                "en": "Verify that the application does not log sensitive data to the system log or filesystem.",
+                "fr": "Vérifier que l'application ne logue pas de données sensibles dans les journaux systèmes ou système de fichiers."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "14",
+            "title": {
+                "en": "Verify that the application does not enable autocomplete for sensitive text input fields, such as passwords, personal information or credit cards.",
+                "fr": "Vérifier que l'application n'active pas autocomplete pour les champs de saisie de texte sensibles, comme les mots de passe, informations personelles ou cartes de crédit."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "15",
+            "title": {
+                "en": "Verify that the mobile app implements certificate pinning to prevent the proxying of app traffic.",
+                "fr": "Vérifier que l'application mobile implémente le pinning de certificat pour empêcher le traffic applicatif d'être proxifié."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "16",
+            "title": {
+                "en": "Verify no misconfigurations are present in the configuration files (Debugging flags set, world readable/writable permissions) and that, by default, configuration settings are set to their safest/most secure\nVerify no misconfigurations are present in the configuration files (Debugging flags set, world readable/writable permissions) and that, by default, configuration settings are set to their safest/most secure\nvalue.\n\n",
+                "fr": "Vérifier qu'aucune mauvaise configuration n'est présente dans les fichiers de configuration (drapeau de déboguage, permissions de lecture/écriture pour tout le monde) et que, par défaut, les paramètres de configuration sont définis à leur niveau le plus sûr/sécurisé."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "17",
+            "title": {
+                "en": "Verify any 3rd-party libraries in use are up to date, contain no known vulnerabilities.",
+                "fr": "Vérifier que toute bibliothèque tierse est à jour, et ne contient aucune vulnérabilité connue."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "18",
+            "title": {
+                "en": "Verify that web data, such as HTTPS traffic, is not cached.",
+                "fr": "Vérifier que les données web, comme le traffic HTTPS, ne sont pas mises en cache."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "19",
+            "title": {
+                "en": "Verify that the query string is not used for sensitive data. Instead, a POST request via SSL should be used with a CSRF token.",
+                "fr": "Vérifier que la chaîne de requête n'est pas utilisée pour des données sensibles. Une requête POST via SSL devrait être utilisée avec un jeton CSRF."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "20",
+            "title": {
+                "en": "Verify that, if applicable, any personal account numbers are truncated prior to storing on the device.",
+                "fr": "Vérifier que, quand cela est possible, tout numéro de compte personnel est tronqué avant d'être stocké sur le périphérique."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "21",
+            "title": {
+                "en": "Verify that the application makes use of Address Space Layout Randomization (ASLR).",
+                "fr": "Vérifier que l'application utilise l'ASLR (Address Space Layout Randomization)."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "22",
+            "title": {
+                "en": "Verify that data logged via the keyboard (iOS) does not contain credentials, financial information or other sensitive data.",
+                "fr": "Vérifier que les données journalisées via le clavier (iOS) ne contiennent pas d'informations d'authentification, données financières ou autres informations sensibles."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "23",
+            "title": {
+                "en": "If an Android app, verify that the app does not create files with permissions of MODE_WORLD_READABLE or MODE_WORLD_WRITABLE",
+                "fr": "Pour une application Android; vérifier que l'application ne crée pas de fichiers avec les permissions MODE_WORLD_READABLE ou MODE_WORLD_WRITABLE."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "24",
+            "title": {
+                "en": "Verify that sensitive data is stored in a cryptographically secure manner (even when stored in the iOS keychain).",
+                "fr": "Vérifier que les données sensibles sont stockées d'une manière sécurisée cryptographiquement (même si stockées dans le keychain iOS)."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "25",
+            "title": {
+                "en": "Verify that anti-debugging and reverse engineering mechanisms are implemented in the app.",
+                "fr": "Vérifier que des mécanismes anti-déboguage et anti ingénierie inverse sont implémentés dans l'application."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "26",
+            "title": {
+                "en": "Verify that the app does not export sensitive activities, intents, content providers etc. on Android.",
+                "fr": "Vérifier que l'application n'exporte pas d'activités sensibles, intentions, fournisseurs de contenu, etc. sur Android."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "27",
+            "title": {
+                "en": "Verify that mutable structures have been used for sensitive strings such as account numbers and are overwritten when not used. (Mitigate damage from memory analysis attacks).",
+                "fr": "Vérifier que des structures mutables ont été utilisées pour les chaînes sensibles comme les numéros de comptes et sont écrasés quand non utilisés. (Mitige le daumage en cas d'attaques par analyse mémoire)."
+            }
+        },
+        {
+            "chapterNr": "17",
+            "nr": "28",
+            "title": {
+                "en": "Verify that any exposed intents, content providers and broadcast receivers perform full data validation on input (Android).",
+                "fr": "Vérifier que toute intention exposée, fournisseur de contenu et récepteur de radiodiffusion réalise une validation de donnée complète en entrée (Android)."
+            }
+        }
+    ]
+}
