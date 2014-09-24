@@ -11,10 +11,6 @@ JSON requires less syntax for the equivalent semantics than XML.
 JSON has a formal specification, that implementations actually follow, unlike CSV.
 JSON has better support and is wider known than YAML.
 
-## Why NodeJS executables?
-Not all OWASP users may be familiar with Python, PHP, Java, C, C++, Bash, etc.
-But all should be familiar with JavaScript.
-
 # Versioning
 Using Semver2.
 
