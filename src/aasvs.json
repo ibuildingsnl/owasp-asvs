@@ -1,0 +1,14 @@
+{
+    "requirements": [
+        {
+            "chapterNr": "2",
+            "nr": "1",
+            "short_title": {
+                "en" : ""
+            },
+            "related": [
+                { "title": { "en": ""}, "url": "https://..." }
+            ]
+        }
+    ]
+}
