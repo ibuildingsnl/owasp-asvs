@@ -1,0 +1,22 @@
+{
+    "name": "owasp-asvs",
+    "version": "2.0.0",
+    "description": "OWASP ASVS 2 data",
+    "main": "src/asvs.json",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ibuildingsnl/owasp-asvs"
+    },
+    "keywords": [
+        "owasp",
+        "asvs",
+        "security",
+        "auditing"
+    ],
+    "author": "Boy Baukema <boy@ibuildings.nl>",
+    "license": "APACHE-2",
+    "bugs": {
+        "url": "https://github.com/ibuildingsnl/owasp-asvs/issues"
+    },
+    "homepage": "https://github.com/ibuildingsnl/owasp-asvs"
+}
