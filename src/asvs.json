@@ -301,6 +301,7 @@
         {
             "chapterNr": "3",
             "nr": "7",
+            "levels": [ "2", "3" ],
             "title": {
                 "en": "Verify that the session id is changed on login to prevent session fixation.",
                 "fr": "Vérifier que l’id de session est renouvelé pour empêcher la fixation de session. (CWE-84, WASC-37, CAPEC-61)"
@@ -489,6 +490,7 @@
         {
             "chapterNr": "5",
             "nr": "1",
+            "levels": [ "1", "2", "3" ],
             "title": {
                 "en": "Verify that the runtime environment is not susceptible to buffer overflows, or that security controls prevent buffer overflows.",
                 "fr": "Vérifier que l'environnement runtime n'est pas vulnérable aux débordements de tampon, ou que des contrôles de sécurité empêchent des débordements de tampon."
@@ -677,6 +679,7 @@
         {
             "chapterNr": "7",
             "nr": "8",
+            "levels": [ "3" ],
             "title": {
                 "en": "Verify that cryptographic modules operate in their approved mode according to their published security policies.",
                 "fr": "Vérifier que les modules cryptographiques opèrent dans leur mode\napprouvé en accord avec leur politiques de sécurité publiées."
