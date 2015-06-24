@@ -1195,7 +1195,7 @@
             "levels": [ "2", "3" ],
             "title": {
                 "en": "Verify the application has sufficient access controls to prevent elevation of privilege attacks, such as allowing anonymous users from accessing secured data or secured functions, or allowing users to access each other’s details or using privileged functions.",
-                "fr": " Vérifier que l'application a des contrôles d'accès suffisants pour empêcher les attaques par élévation de privilèges, comme permettre à des utilisateurs anonymes d'accéder à des données ou fonctions sécurisées, ou permettre aux utilisateurs d'accéder aux informations des autres ou utiliser des fonctions privilégiées."
+                "fr": "Vérifier que l'application a des contrôles d'accès suffisants pour empêcher les attaques par élévation de privilèges, comme permettre à des utilisateurs anonymes d'accéder à des données ou fonctions sécurisées, ou permettre aux utilisateurs d'accéder aux informations des autres ou utiliser des fonctions privilégiées."
             }
         },
         {
