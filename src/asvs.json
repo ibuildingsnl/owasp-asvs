@@ -1,4 +1,8 @@
 {
+    "languages": [
+        "en",
+        "fr"
+    ],
     "chapterNames": {
         "2": {
             "en": "Authentication"
