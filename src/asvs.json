@@ -1,66 +1,113 @@
 {
-    "chapterNames": {
+    "chapters": {
         "1": {
-            "en": "Architecture, design and threat modelling"
+            "name": {
+                "en": "Architecture, design and threat modelling"
+            }
         },
         "2": {
-            "en": "Authentication verification requirements"
+            "name": {
+                "en": "Authentication verification requirements"
+            }
         },
         "3": {
-            "en": "Session management verification requirements"
+            "name": {
+                "en": "Session management verification requirements"
+            }
         },
         "4": {
-            "en": "Access control verification requirements"
+            "name": {
+                "en": "Access control verification requirements"
+            }
         },
         "5": {
-            "en": "Malicious input handling verification requirements"
+            "name": {
+                "en": "Malicious input handling verification requirements"
+            }
         },
         "6": {
-            "en": "Output encoding / escaping - This section was incorporated into V5 in Application Security Verification Standard 2.0. ASVS requirement 5.16 addresses contextual output encoding to help prevent Cross Site Scripting."
+            "name": {
+                "en": "Output encoding / escaping"
+            },
+            "deprecationNotice": {
+                "en": "This section was incorporated into V5 in Application Security Verification Standard 2.0. ASVS requirement 5.16 addresses contextual output encoding to help prevent Cross Site Scripting."
+            }
         },
         "7": {
-            "en": "Cryptography at rest verification requirements"
+            "name": {
+                "en": "Cryptography at rest verification requirements"
+            }
         },
         "8": {
-            "en": "Error handling and logging verification requirements"
+            "name": {
+                "en": "Error handling and logging verification requirements"
+            }
         },
         "9": {
-            "en": "Data protection verification requirements"
+            "name": {
+                "en": "Data protection verification requirements"
+            }
         },
         "10": {
-            "en": "Communications security verification requirements"
+            "name": {
+                "en": "Communications security verification requirements"
+            }
         },
         "11": {
-            "en": "HTTP security configuration verification requirements"
+            "name": {
+                "en": "HTTP security configuration verification requirements"
+            }
         },
         "12": {
-            "en": "Security configuration verification requirements - This section was incorporated into V11 in Application Security Verification Standard 2.0. "
+            "name": {
+                "en": "Security configuration verification requirements"
+            },
+            "deprecationNotice": {
+                "en": "This section was incorporated into V11 in Application Security Verification Standard 2.0. "
+            }
         },
         "13": {
-            "en": "Malicious controls verification requirements"
+            "name": {
+                "en": "Malicious controls verification requirements"
+            }
         },
         "14": {
-            "en": "Internal security verification requirements - This section was incorporated into V13 in Application Security Verification Standard 2.0. "
+            "name": {
+                "en": "Internal security verification requirements"
+            },
+            "deprecationNotice": {
+                "en": "This section was incorporated into V13 in Application Security Verification Standard 2.0."
+            }
         },
         "15": {
-            "en": "Business logic verification requirements"
+            "name": {
+                "en": "Business logic verification requirements"
+            }
         },
         "16": {
-            "en": "Files and resources verification requirements"
+            "name": {
+                "en": "Files and resources verification requirements"
+            }
         },
         "17": {
-            "en": "Mobile verification requirements"
+            "name": {
+                "en": "Mobile verification requirements"
+            }
         },
         "18": {
-            "en": "Web services verification requirements"
+            "name": {
+                "en": "Web services verification requirements"
+            }
         },
         "19": {
-            "en": "Configuration"
+            "name": {
+                "en": "Configuration"
+            }
         }
     },
     "levelNames": {
         "1": {
-            "en": "Oppertunistic"
+            "en": "Opportunistic"
         },
         "2": {
             "en": "Standard"
