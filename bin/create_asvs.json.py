@@ -116,9 +116,9 @@ class FixtureCreator(object):
         return json.dumps(json_file, sort_keys=True, indent=4)
 
 if __name__ == "__main__":
-    p = Path("src/asvs_v3_xls.csv")
+    p = Path("target/asvs.csv")
     file_path = Path.resolve(p)
     fc = FixtureCreator(str(file_path))
-    o = Path("src/asvs_v3.json")
+    o = Path("src/asvs.json")
     out_file = open(str(Path.resolve(o)), "w")
     out_file.write(fc.create_json_file())
