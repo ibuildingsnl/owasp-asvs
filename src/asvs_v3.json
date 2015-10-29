@@ -198,7 +198,7 @@
             ],
             "nr": "2",
             "title": {
-                "en": "Verify that all password fields do not echo the user\u2019s password when it is entered."
+                "en": "Verify that all password fields do not echo the user’s password when it is entered."
             }
         },
         {
@@ -210,7 +210,8 @@
             ],
             "nr": "4",
             "title": {
-                "en": "Verify all authentication controls are enforced on the server side."
+                "en": "Verify all authentication controls are enforced on the server side.",
+                "fr": "Vérifier que tous les contrôles d’authentification sont mis en place du côté serveur."
             }
         },
         {
@@ -222,7 +223,8 @@
             ],
             "nr": "6",
             "title": {
-                "en": "Verify all authentication controls fail securely to ensure attackers cannot log in."
+                "en": "Verify all authentication controls fail securely to ensure attackers cannot log in.",
+                "fr": "Vérifier que tous les contrôles d’authentification échouent en toute sécurité pour assurer que des attaquants ne peuvent pas s’authentifier."
             }
         },
         {
@@ -304,7 +306,8 @@
             ],
             "nr": "17",
             "title": {
-                "en": "Verify that the forgotten password function and other recovery paths do not reveal the current password and that the new password is not sent in clear text to the user."
+                "en": "Verify that the forgotten password function and other recovery paths do not reveal the current password and that the new password is not sent in clear text to the user.",
+                "fr": "Vérifier que la fonctionnalité mot de passe oublié et autre chemins de recouvrement ne révèlent pas le mot de passe courant et que le nouveau mot de passe n’est pas envoyé en texte clair à l’utilisateur."
             }
         },
         {
@@ -328,7 +331,8 @@
             ],
             "nr": "19",
             "title": {
-                "en": "Verify there are no default passwords in use for the application framework or any components used by the application (such as \u201cadmin/password\u201d)."
+                "en": "Verify there are no default passwords in use for the application framework or any components used by the application (such as “admin/password”).",
+                "fr": "Vérifier qu’aucun mot de passe par défaut (tel que admin/password) n’est utilisé pour le framework de l’application ou un de ses composants."
             }
         },
         {
@@ -397,7 +401,8 @@
             ],
             "nr": "25",
             "title": {
-                "en": "Verify that the system can be configured to disallow the use of a configurable number of previous passwords."
+                "en": "Verify that the system can be configured to disallow the use of a configurable number of previous passwords.",
+                "fr": "Vérifier que le système peut être configure pour empêcher l’utilisation d’un nombre configurable de mots de passe précédemment utilisés."
             }
         },
         {
@@ -499,7 +504,8 @@
             ],
             "nr": "2",
             "title": {
-                "en": "Verify that sessions are invalidated when the user logs out."
+                "en": "Verify that sessions are invalidated when the user logs out.",
+                "fr": "Vérifier que les sessions sont invalidées lorsque l’utilisateur se déconnecte."
             }
         },
         {
@@ -511,7 +517,8 @@
             ],
             "nr": "3",
             "title": {
-                "en": "Verify that sessions timeout after a specified period of inactivity."
+                "en": "Verify that sessions timeout after a specified period of inactivity.",
+                "fr": "Vérifier que les sessions s’interrompent après une période d’inactivité donnée."
             }
         },
         {
@@ -521,7 +528,8 @@
             ],
             "nr": "4",
             "title": {
-                "en": "Verify that sessions timeout after an administratively-configurable maximum time period regardless of activity (an absolute timeout)."
+                "en": "Verify that sessions timeout after an administratively-configurable maximum time period regardless of activity (an absolute timeout).",
+                "fr": "Vérifier que les sessions sont interrompues après une période (absolue) définie configurable, sans lien avec l’inactivité."
             }
         },
         {
@@ -592,7 +600,7 @@
             ],
             "nr": "12",
             "title": {
-                "en": "Verify that session ids stored in cookies have their path set to an appropriately restrictive value for the application, and authentication session tokens additionally set the \u201cHttpOnly\u201d and \u201csecure\u201d attributes"
+                "en": "Verify that session ids stored in cookies have their path set to an appropriately restrictive value for the application, and authentication session tokens additionally set the “HttpOnly” and “secure” attributes"
             }
         },
         {
@@ -676,7 +684,8 @@
             ],
             "nr": "8",
             "title": {
-                "en": "Verify that access controls fail securely."
+                "en": "Verify that access controls fail securely.",
+                "fr": "Vérifier que les contrôles d'accès échouent de manière sure."
             }
         },
         {
@@ -699,7 +708,8 @@
             ],
             "nr": "10",
             "title": {
-                "en": "Verify that all user and data attributes and policy information used by access controls cannot be manipulated by end users unless specifically authorized."
+                "en": "Verify that all user and data attributes and policy information used by access controls cannot be manipulated by end users unless specifically authorized.",
+                "fr": "Vérifier que tous les attributs utilisateur et données et information de politique utilisés par des contrôles d'accès ne peuvent pa être manipulés par les utilisateurs finaux à moins d'une autorisation spécifique."
             }
         },
         {
@@ -709,7 +719,8 @@
             ],
             "nr": "11",
             "title": {
-                "en": "Verify that there is a centralized mechanism (including libraries that call external authorization services) for protecting access to each type of protected resource."
+                "en": "Verify that there is a centralized mechanism (including libraries that call external authorization services) for protecting access to each type of protected resource.",
+                "fr": "Vérifier qu'il existe un mécanisme centralisé (incluant des bibliothèques qui font appel à des services d'autorisation externalisés) pour protéger l'accès à tout type de ressource protégée."
             }
         },
         {
@@ -754,7 +765,8 @@
             ],
             "nr": "15",
             "title": {
-                "en": "Verify the application has additional authorization (such as step up or adaptive authentication) for lower value systems, and / or segregation of duties for high value applications to enforce anti-fraud controls as per the risk of application and past fraud."
+                "en": "Verify the application has additional authorization (such as step up or adaptive authentication) for lower value systems, and / or segregation of duties for high value applications to enforce anti-fraud controls as per the risk of application and past fraud.",
+                "fr": "Vérifier que l'application implémente un mécanisme d'autorisation supplémentaire (comme une autentification augmentée ou adaptative) pour les systèmes de faible valeur, et / ou une séparation des taches pour les applications à forte valeur pour imposer des contrôles anti-fraude en fonction du risque."
             }
         },
         {
@@ -778,7 +790,8 @@
             ],
             "nr": "1",
             "title": {
-                "en": "Verify that the runtime environment is not susceptible to buffer overflows, or that security controls prevent buffer overflows."
+                "en": "Verify that the runtime environment is not susceptible to buffer overflows, or that security controls prevent buffer overflows.",
+                "fr": "Vérifier que l'environnement runtime n'est pas vulnérable aux débordements de tampon, ou que des contrôles de sécurité empêchent des débordements de tampon."
             }
         },
         {
@@ -812,7 +825,8 @@
             ],
             "nr": "6",
             "title": {
-                "en": "Verify that a single input validation control is used by the application for each type of data that is accepted."
+                "en": "Verify that a single input validation control is used by the application for each type of data that is accepted.",
+                "fr": "Vérifier qu'un contrôle de validation d'entrée unique est utilisé par l'application pour chaque type de donnée qui est accepté."
             }
         },
         {
@@ -895,7 +909,8 @@
             ],
             "nr": "16",
             "title": {
-                "en": "If the application framework allows automatic mass parameter assignment (also called automatic variable binding) from the inbound request to a model, verify that security sensitive fields such as \u201caccountBalance\u201d, \u201crole\u201d or \u201cpassword\u201d are protected from malicious automatic binding."
+                "en": "If the application framework allows automatic mass parameter assignment (also called automatic variable binding) from the inbound request to a model, verify that security sensitive fields such as “accountBalance”, “role” or “password” are protected from malicious automatic binding.",
+                "fr": "Si le framework d'application permet l'assignement automatique de paramètre en masse (aussi appelé binding de variable automatique) depuis la requête entrante vers un modèle; vérifier que les champs de sécurité sensibles, comme \"accountBalance\", \"role\" ou \"password\" sont protégés contre le binding automatique malicieux."
             }
         },
         {
@@ -906,7 +921,8 @@
             ],
             "nr": "17",
             "title": {
-                "en": "Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (GET, POST, cookies, headers, environment, etc.)"
+                "en": "Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (GET, POST, cookies, headers, environment, etc.)",
+                "fr": "Vérifier que l'application possède des défenses contre les attaques par pollution de paramètre HTTP, en particulier si le framework d'application ne fait pas distinction entre la source des paramètres de requête (GET, POST, cookies, entêtes, environnement, etc.)"
             }
         },
         {
@@ -950,7 +966,7 @@
             ],
             "nr": "21",
             "title": {
-                "en": "Verify that unstructured data is sanitized to enforce generic safety measures such as allowed characters and length, and characters potentially harmful in given context should be escaped (e.g. natural names with Unicode or apostrophes, such as \u306d\u3053 or O'Hara)"
+                "en": "Verify that unstructured data is sanitized to enforce generic safety measures such as allowed characters and length, and characters potentially harmful in given context should be escaped (e.g. natural names with Unicode or apostrophes, such as ねこ or O'Hara)"
             }
         },
         {
@@ -1029,7 +1045,7 @@
             ],
             "nr": "6",
             "title": {
-                "en": "Verify that all random numbers, random file names, random GUIDs, and random strings are generated using the cryptographic module\u2019s approved random number generator when these random values are intended to be not guessable by an attacker."
+                "en": "Verify that all random numbers, random file names, random GUIDs, and random strings are generated using the cryptographic module’s approved random number generator when these random values are intended to be not guessable by an attacker."
             }
         },
         {
@@ -1051,7 +1067,8 @@
             ],
             "nr": "8",
             "title": {
-                "en": "Verify that cryptographic modules operate in their approved mode according to their published security policies."
+                "en": "Verify that cryptographic modules operate in their approved mode according to their published security policies.",
+                "fr": "Vérifier que les modules cryptographiques opèrent dans leur mode approuvé en accord avec leur politiques de sécurité publiées."
             }
         },
         {
@@ -1138,7 +1155,8 @@
             ],
             "nr": "2",
             "title": {
-                "en": "Verify that error handling logic in security controls denies access by default."
+                "en": "Verify that error handling logic in security controls denies access by default.",
+                "fr": "Vérifier que la logique de gestion d'erreur dans les contrôles de sécurité empêche l'accès par défaut."
             }
         },
         {
@@ -1170,7 +1188,8 @@
             ],
             "nr": "5",
             "title": {
-                "en": "Verify that all events that include untrusted data will not execute as code in the intended log viewing software."
+                "en": "Verify that all events that include untrusted data will not execute as code in the intended log viewing software.",
+                "fr": "Vérifier que tous les événements qui incluent des données non sures ne seront pas exécutées comme du code dans l'outil de visualisation des journaux."
             }
         },
         {
@@ -1181,7 +1200,8 @@
             ],
             "nr": "6",
             "title": {
-                "en": "Verify that security logs are protected from unauthorized access and modification."
+                "en": "Verify that security logs are protected from unauthorized access and modification.",
+                "fr": "Vérifier que les journaux de sécurité sont protégés contre les accès et modifications non autorisés."
             }
         },
         {
@@ -1192,7 +1212,7 @@
             ],
             "nr": "7",
             "title": {
-                "en": "Verify that the application does not log sensitive data as defined under local privacy laws or regulations, organizational sensitive data as defined by a risk assessment, or sensitive authentication data that could assist an attacker, including user\u2019s session identifiers, passwords, hashes, or API tokens."
+                "en": "Verify that the application does not log sensitive data as defined under local privacy laws or regulations, organizational sensitive data as defined by a risk assessment, or sensitive authentication data that could assist an attacker, including user’s session identifiers, passwords, hashes, or API tokens."
             }
         },
         {
@@ -1202,7 +1222,8 @@
             ],
             "nr": "8",
             "title": {
-                "en": "Verify that all non-printable symbols and field separators are properly encoded in log entries, to prevent log injection."
+                "en": "Verify that all non-printable symbols and field separators are properly encoded in log entries, to prevent log injection.",
+                "fr": "Vérifier que tous les symboles non-imprimables et séparateurs de champs sont correctement encodés dans les entrées des journaux, pour prévenir l'injection de log."
             }
         },
         {
@@ -1255,7 +1276,8 @@
             ],
             "nr": "1",
             "title": {
-                "en": "Verify that all forms containing sensitive information have disabled client side caching, including autocomplete features."
+                "en": "Verify that all forms containing sensitive information have disabled client side caching, including autocomplete features.",
+                "fr": "Vérifier que tous les formulaires contenant des informations sensibles ont désactivés le mécanisme de cache côté client, incluant les fonctionnalités de remplissage/complétion automatique."
             }
         },
         {
@@ -1377,7 +1399,8 @@
             ],
             "nr": "1",
             "title": {
-                "en": "Verify that a path can be built from a trusted CA to each Transport Layer Security (TLS) server certificate, and that each server certificate is valid."
+                "en": "Verify that a path can be built from a trusted CA to each Transport Layer Security (TLS) server certificate, and that each server certificate is valid.",
+                "fr": "Vérifier qu'un chemin peut être construit depuis un CA de confiance vers chaque certificat serveur TLS (Transport Layer Security), et que chaque certificat serveur est valide."
             }
         },
         {
@@ -1399,7 +1422,8 @@
             ],
             "nr": "4",
             "title": {
-                "en": "Verify that backend TLS connection failures are logged."
+                "en": "Verify that backend TLS connection failures are logged.",
+                "fr": "Vérifier que les échecs de connexion TLS backend sont journalisés."
             }
         },
         {
@@ -1409,7 +1433,8 @@
             ],
             "nr": "5",
             "title": {
-                "en": "Verify that certificate paths are built and verified for all client certificates using configured trust anchors and revocation information."
+                "en": "Verify that certificate paths are built and verified for all client certificates using configured trust anchors and revocation information.",
+                "fr": "Vérifier que les chemins de certificat sont construits et vérifiés pour tous les certificats clients en utilisant des ancres de confiance et informations de révocation."
             }
         },
         {
@@ -1420,7 +1445,8 @@
             ],
             "nr": "6",
             "title": {
-                "en": "Verify that all connections to external systems that involve sensitive information or functions are authenticated."
+                "en": "Verify that all connections to external systems that involve sensitive information or functions are authenticated.",
+                "fr": "Vérifier que toutes les connexions aux systèmes externes qui impliquent des informations ou fonctions sensibles sont authentifiées."
             }
         },
         {
@@ -1635,7 +1661,8 @@
             ],
             "nr": "1",
             "title": {
-                "en": "Verify the application will only process business logic flows in sequential step order, with all steps being processed in realistic human time, and not process out of order, skipped steps, process steps from another user, or too quickly submitted transactions."
+                "en": "Verify the application will only process business logic flows in sequential step order, with all steps being processed in realistic human time, and not process out of order, skipped steps, process steps from another user, or too quickly submitted transactions.",
+                "fr": "Vérifier que l'application ne traitera les flux métier uniquement dans un ordre séquentiel, avec chaque étape étant traitée en une durée réaliste pour un humain, et ne traite pas dans le désordre, des étapes sautées, des étapes d'un autre utilisateur, ou des transactions soumises trop rapidement."
             }
         },
         {
@@ -1740,7 +1767,8 @@
             ],
             "nr": "8",
             "title": {
-                "en": "Verify the application code does not execute uploaded data obtained from untrusted sources."
+                "en": "Verify the application code does not execute uploaded data obtained from untrusted sources.",
+                "fr": "Vérifier que le code de l'application n'exécute pas des données téléversées obtenues depuis des sources non fiables."
             }
         },
         {
@@ -1865,7 +1893,8 @@
             ],
             "nr": "10",
             "title": {
-                "en": "Verify that mutable structures have been used for sensitive strings such as account numbers and are overwritten when not used. (Mitigate damage from memory analysis attacks)."
+                "en": "Verify that mutable structures have been used for sensitive strings such as account numbers and are overwritten when not used. (Mitigate damage from memory analysis attacks).",
+                "fr": "Vérifier que des structures mutables ont été utilisées pour les chaînes sensibles comme les numéros de comptes et sont écrasés quand non utilisés. (Mitige le daumage en cas d'attaques par analyse mémoire)."
             }
         },
         {
@@ -1877,7 +1906,7 @@
             ],
             "nr": "11",
             "title": {
-                "en": "Verify that the app\u2019s exposed activities, intents, content providers etc. validate all inputs."
+                "en": "Verify that the app’s exposed activities, intents, content providers etc. validate all inputs."
             }
         },
         {
