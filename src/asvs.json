@@ -190,13 +190,14 @@
         {
             "chapterNr": "1",
             "levels": [
+                2,
                 3
             ],
             "nr": "7",
             "title": {
                 "en": "Verify all security controls (including libraries that call external security services) have a centralized implementation."
             },
-            "since": "1.0"
+            "since": "3.0"
         },
         {
             "chapterNr": "1",
@@ -233,6 +234,18 @@
                 "en": "Verify that there is no sensitive business logic, secret keys or other proprietary information in client side code."
             },
             "since": "1.0"
+        },
+        {
+            "chapterNr": "1",
+            "levels": [
+                2,
+                3
+            ],
+            "nr": "11",
+            "title": {
+                "en": "Verify that all application components, libraries, modules, frameworks, platform, and operating systems are free from known vulnerabilities."
+            },
+            "since": "3.0.1"
         },
         {
             "chapterNr": "2",
@@ -567,6 +580,18 @@
             "since": "3.0"
         },
         {
+            "nr": "33",
+            "levels": [
+                1,
+                2,
+                3
+            ],
+            "title": {
+                "en": "Browser autocomplete, and integration with password managers are permitted unless prohibited by risk based policy"
+            },
+            "since": "3.0.1"
+        },
+        {
             "chapterNr": "3",
             "levels": [
                 1,
@@ -610,6 +635,7 @@
         {
             "chapterNr": "3",
             "levels": [
+                2,
                 3
             ],
             "nr": "4",
@@ -1247,7 +1273,7 @@
             ],
             "nr": "13",
             "title": {
-                "en": "Verify that where possible, keys and secrets are zeroed when destroyed."
+                "en": "Verify that sensitive passwords or key material maintained in memory is overwritten with zeros as soon as it is no longer required, to mitigate memory dumping attacks."
             },
             "since": "3.0"
         },
@@ -1419,6 +1445,19 @@
             "since": "3.0"
         },
         {
+            "chapterNr": "8",
+            "levels": [
+                1,
+                2,
+                3
+            ],
+            "nr": "13",
+            "title": {
+                "en": "Time sources should be synchronized to ensure logs have the correct time"
+            },
+            "since": "3.0.1"
+        },
+        {
             "chapterNr": "9",
             "levels": [
                 1,
@@ -1548,7 +1587,7 @@
             ],
             "nr": "11",
             "title": {
-                "en": "Verify that sensitive data is rapidly sanitized from memory as soon as it is no longer needed and handled in accordance to functions and techniques supported by the framework/library/operating system."
+                "en": "Verify that sensitive data maintained in memory is overwritten with zeros as soon as it no longer required, to mitigate memory dumping attacks."
             },
             "since": "3.0"
         },
@@ -1630,6 +1669,7 @@
         {
             "chapterNr": "10",
             "levels": [
+                2,
                 3
             ],
             "nr": "10",
@@ -2094,12 +2134,12 @@
         {
             "chapterNr": "17",
             "levels": [
+                2,
                 3
             ],
             "nr": "10",
             "title": {
-                "en": "Verify that mutable structures have been used for sensitive strings such as account numbers and are overwritten when not used. (Mitigate damage from memory analysis attacks).",
-                "fr": "Vérifier que des structures mutables ont été utilisées pour les chaînes sensibles comme les numéros de comptes et sont écrasés quand non utilisés. (Mitige le daumage en cas d'attaques par analyse mémoire)."
+                "en": "Verify that sensitive information maintained in memory is overwritten with zeros as soon as it is no longer required, to mitigate memory dumping attacks.",
             },
             "since": "2.0"
         },
@@ -2112,7 +2152,7 @@
             ],
             "nr": "11",
             "title": {
-                "en": "Verify that the app’s exposed activities, intents, content providers etc. validate all inputs."
+                "en": "Verify that the app validates input to exported activities, intents, or content providers."
             },
             "since": "2.0"
         },
@@ -2227,7 +2267,7 @@
             ],
             "nr": "9",
             "title": {
-                "en": "Verify that the message payload is signed to ensure reliable transport between client and service."
+                "en": "Verify that the message payload is signed to ensure reliable transport between client and service, using JSON Web Signing or WS-Security for SOAP requests."
             },
             "since": "3.0"
         },
